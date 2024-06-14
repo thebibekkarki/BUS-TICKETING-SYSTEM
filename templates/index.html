@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uTravel - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>uTravel</h1>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">About Us</a> |
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Welcome to uTravel</h2>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="Enter source location">
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="Enter destination location">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</body>
+</html>
